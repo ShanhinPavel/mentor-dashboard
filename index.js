@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('file-system');
 const getWorkbook = require('./src/gettingData/excelToJson/main_functions/getWorkbook');
 const getMentors = require('./src/gettingData/excelToJson/main_functions/getMentors');
 const getTasks = require('./src/gettingData/excelToJson/main_functions/getTasks');
@@ -16,4 +16,4 @@ const students = getStudents(madeTasks, tasksSheet);
 const tasks = getTasks(tasksSheet);
 const totalJson = getTotalJson(mentorStudentCollection, students, tasks);
 
-fs.writeFileSync('mentor-student.json', totalJson);
+fs.writeFileSync('src/mentor-student.json', totalJson);
