@@ -24,7 +24,10 @@ function getTotalJson(mentorCollection, studentCollection, taskCollection) {
     studentsObject[student] = studentCollection[student];
   });
 
+  const arrayOfMentors = Object.keys(mentorStudent);
+
   totalJson.tasks = taskCollection;
+  totalJson.allMentorsNames = arrayOfMentors;
   totalJson.mentor = mentorStudent;
 
   return JSON.stringify(totalJson);

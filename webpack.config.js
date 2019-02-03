@@ -45,7 +45,7 @@ module.exports = {
       { from: './src/mentor-student.json', to: './' }
     ]),
 
-    new WriteFilePlugin()
+    // new WriteFilePlugin()
   ]
 };
 
